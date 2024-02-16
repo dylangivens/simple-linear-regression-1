@@ -75,6 +75,28 @@ print(c)
 m = lr.coef_
 print(m)
 
-#test the model
-y_pred_train = m*x_train + c
+#examine the model
+y_pred_train = lr.predict(x_train)
 print(y_pred_train)
+
+#graph best fit line over scatterplot
+plt.scatter(x_train, y_train)
+plt.title('Wins Per Runs')
+plt.plot(x_train, y_pred_train, color = 'red')
+plt.xlabel('Runs Per Team Per Season')
+plt.ylabel('Wins Per Team Per Season')
+plt.show()
+
+#test the model
+y_pred_test = lr.predict(x_test)
+print(y_pred_test)
+
+plt.scatter(x_test, y_test)
+plt.xlabel('Runs Per Team Per Season')
+plt.ylabel('Wins Per Team Per Season')
+plt.plot(x_test, y_pred_test, color = 'red')
+plt.show()
+
+#model
+# y = 0.05818x + 39.37932
+# number of wins in a season = 0.05818(number of runs per season) + 39.37932
