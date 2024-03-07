@@ -1,1 +1,1 @@
-# simple-linear-regression-1
+In this project, I use simple linear regression to predict how many games a MLB team will win in a 162-game season based on how many runs they scored. I use data from every MLB team in every season that played 162 games in their regular season.
